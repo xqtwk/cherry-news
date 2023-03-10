@@ -1,15 +1,38 @@
 <script setup lang="ts">
-const categories: string[] = ["Politics", "Business", "Tech", "Arts", "Science", "Health", "Sports"];
+import { Element, Categories } from "@/types"
+
+
+
+const elements: Element[] = [
+  { id: 1, title: 'Element 1', category: Categories.ARTS, text: 'gadf' },
+  { id: 2, title: 'Element 2', category: Categories.BUSINESS, text: 'gahd0rf9hgujrt' },
+  { id: 3, title: 'Element 3', category: Categories.HEALTH, text: 'cvbvcxbcvbbbbb' },
+  { id: 4, title: 'Element 4', category: Categories.POLITICS, text: '09-854q69054' },
+  { id: 5, title: 'Element 4', category: Categories.SCIENCE, text: '09-854q69054' },
+  { id: 6, title: 'Element 4', category: Categories.SPORTS, text: '09-854q69054' },
+  { id: 7, title: 'Element 4', category: Categories.TECH, text: '09-854q69054' },
+];
+
+const selectedCategory = ref<string>('');
+
+function selectCategory(category: string) {
+  selectedCategory.value = category;
+}
+
+
 </script>
 
 <template>
-
-    <div class="categories flex flex-wrap mt-10">
-        <button class="mr-2 category border-2 border-black dark:border-white hover:border-[#b0695c] px-3 rounded-full hover:text-[#b0695c] text-lg" v-for="item in categories">{{ item }}</button>
+    <div class="categories flex flex-wrap mt-10" >
+        <div v-for="item in Categories">
+        <button class="mr-2 category border-2 border-black dark:border-white hover:border-[#b0695c] px-3 rounded-full hover:text-[#b0695c] text-lg"
+        @click="selectCategory(item)">{{ item }}</button>
+        </div>
     </div>
-    <div class="flex justify-center mt-12 mb-6">
+    
+    <div class="flex justify-center mt-12 mb-6" >
         <div class="w-1/4  flex flex-col">
-            <div>
+            <div >
             <img class="mb-2" src="~/assets/img/SU2022-Web-Industry-Architecture-S2.jpg" alt="image for news 1">
             <h2 class="text-black text-[28px] my-3 dark:text-white">Unrecognized genius</h2>
             <p class="text-black dark:text-white">Rising star Alexandra's new work causes
@@ -50,6 +73,7 @@ const categories: string[] = ["Politics", "Business", "Tech", "Arts", "Science",
   <div class="w-1/4 bg-gray-200 h-16 flex flex-col ">
     <div class="bg-[#b0695c]">
             <h2 class="number text-white text-bs my-3 ml-3">NUMBER OF THE DAY</h2>
+            <h2 class="text-white mx-3 text-4xl">$ 80, 000</h2>
             <p class="text-white font-thin mx-3 my-5">Lum id, vehicula sit amet nulla.Quisque a congue lectus. us eu nulla ornare gravida. Proin id aliquet turpis. 
                 Sed et placerat libero. Sed blandit rutrum porttitor. Phasellus nec elit a lacus imperdiet.
             </p>
@@ -66,7 +90,8 @@ const categories: string[] = ["Politics", "Business", "Tech", "Arts", "Science",
     </div>
 
   </div>
-</div>
+    </div>
+    
 </template>
 
 <style scoped>
