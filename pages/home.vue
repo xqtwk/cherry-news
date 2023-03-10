@@ -1,3 +1,6 @@
+<script setup lang="ts">
+
+</script>
 <template>
 <html class="bg-[#d6c6b9] dark:bg-dark ">
 <div style="position: absolute" class="bg-[#d6c6b9] dark:bg-dark background dark:text-white">
@@ -13,16 +16,16 @@
 
 </div>
 </html>
-    </template>
-        <style scoped>
-    
-        html {
-            background-color: #d6c6b9;
-        
-        }
-        main{
-            margin:5%;
-            background-color:#f9f4ed;
-        }
-        
-        </style>
+</template>
+<style scoped>
+
+html {
+    background-color: #d6c6b9;
+
+}
+main{
+    margin:5%;
+    background-color:#f9f4ed;
+}
+
+</style>

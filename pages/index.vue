@@ -1,36 +1,30 @@
-
 <script setup lang="ts" >
+
+
 
 
 </script>
 
 <template>  
-<html>
-    
-    <main class="rounded-3xl bg-gradient-to-tr from-[#fce4dc] via-[#eaeaea] to-[#fce4dc]">
+<html class="bg-[#d6c6b9] dark:bg-dark ">
+<div style="position: absolute" class="bg-[#d6c6b9] dark:bg-dark background dark:text-white">
+
+  <main class="rounded-3xl bg-gradient-to-tr from-[#fce4dc] via-[#eaeaea] to-[#fce4dc] dark:from-[#564947] dark:via-black dark:to-[#554846] ">
     <Header />
-    <NuxtPage />
-    <NuxtLink to="/reviews">About page</NuxtLink>
     <div class="main-container mx-20 flex flex-col mt-4 ">
-        <h1 class="text-[50px] text-black">Latest News</h1>
+        <h1 class="text-[50px] text-black dark:text-white">Latest News</h1>
         <NewsList/>
-    </div>   
-
-
-    
-
-</main>
+    </div>  
+  </main>
+</div>
 </html>
-
-
-
-
-
 </template>
 <style>
+
+
 .page-enter,.page-enter-active,
 .page-leave-active {
-  transition: all 0.2s;
+  transition: 0.3s;
 }
 .page-enter-from,
 .page-leave-to {
@@ -39,12 +33,11 @@
 }
 </style>
 <style scoped>
-
 html {
-    background-color: #d6c6b9;
-    font-colour:#2a2a2a;
-
+      background-color:#6b6464;
 }
+
+
 main{
     margin:5%;
     background-color:#f9f4ed;
