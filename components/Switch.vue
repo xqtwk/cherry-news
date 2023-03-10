@@ -11,7 +11,7 @@ const { enabled, toggleTheme } = useTheme()
 </script>
 
 <template>
-    <input type="checkbox" class="toggle-switch dark:bg-white" checked 
+    <input type="checkbox" class="toggle-switch dark:text-white" checked 
     v-model="enabled"
     v-if="enabled !== null"
     @click="toggleTheme">
