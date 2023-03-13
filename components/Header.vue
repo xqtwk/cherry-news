@@ -4,7 +4,7 @@
 </script>
 
 <template>
-<header class="pt-5 pb-5 " >
+<header class="pt-5 pb-5 "  >
     <nav class=" px-4 lg:px-6 py-2.5 rounded-t-3xl justify-between">
       <div class="flex flex-wrap justify-between  mx-10">
         <div class="flex flex-wrap justify-between max-w-screen-xl">
